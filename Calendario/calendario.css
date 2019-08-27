@@ -10,8 +10,18 @@
   padding: 10px;
 }
 
+.text{
+   color: white
+
+}
+
+#calendario {
+  background-image: linear-gradient(blue, Aqua );
+}
+
 #diasc {
   border-style: solid;
+  border-color: white;
 }
 
 
