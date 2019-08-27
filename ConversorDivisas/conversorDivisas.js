@@ -164,9 +164,11 @@ function onClickConvert(){
   selectedCoins.forEach(function(coin){
 
     if(inputCoin.id != coin.id){
-      var key = inputCoin.id + "_" + coin.id;
 
+      var key = inputCoin.id + "_" + coin.id;
+      alert(key);
       var result = convert(key,inputCoinValue);
+      console.log(coin.children);
       coin.children[6].innerHTML = result.toString();
     }
 
