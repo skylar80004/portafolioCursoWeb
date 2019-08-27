@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="conversorDivisas.js"></script>
+
+    <body>
+
+      <div id="container">
+
+        <div id="coins">
+          <div id="first">
+            <div id="cr" class="coin">
+              <img src="cr.png" alt="Costa Rica Flag" height="100" width="100">
+              <p>Costa Rica</p>
+              <p>Colón</p>
+              <p>CRC</p>
+              <input type="number" onchange="onChangeInput.call(this)">
+              <img src="starOff.png" onclick="onClickStar.call(this)" alt="Star off" height="25" width="25">
+              <p>Resultado</p>
+
+            </div>
+
+            <div id="usa" class="coin">
+              <img src="usa.png" alt="Costa Rica Flag" height="100" width="100">
+              <p>Estados Unidos</p>
+              <p>Dólar</p>
+              <p>USD</p>
+              <input type="number" onchange="onChangeInput.call(this)">
+              <img src="starOff.png" onclick="onClickStar.call(this)" alt="Star off" height="25" width="25">
+              <p>Resultado</p>
+
+            </div>
+
+            <div id="japan" class="coin">
+              <img src="japan.png" alt="Costa Rica Flag" height="100" width="100">
+              <p>Japón</p>
+              <p>Yen</p>
+              <p>JPY</p>
+              <input type="number" onchange="onChangeInput.call(this)">
+              <img src="starOff.png" onclick="onClickStar.call(this)" alt="Star off" height="25" width="25">
+              <p>Resultado</p>
+
+            </div>
+          </div>
+
+          <div id="second">
+
+            <div id="arabia" class="coin">
+              <img src="saudi.png" alt="Costa Rica Flag" height="100" width="100">
+              <p>Arabia Saudita</p>
+              <p>Riyal Saudí</p>
+              <p>SAR</p>
+              <input type="number" onchange="onChangeInput.call(this)">
+              <img src="starOff.png" onclick="onClickStar.call(this)" alt="Star off" height="25" width="25">
+              <p>Resultado</p>
+
+            </div>
+
+            <div id="europe" class="coin">
+              <img src="eu.png" alt="Costa Rica Flag" height="100" width="100">
+              <p>Unión Europea</p>
+              <p>Euro</p>
+              <p>EUR</p>
+              <input type="number" onchange="onChangeInput.call(this)">
+              <img src="starOff.png" onclick="onClickStar.call(this)" alt="Star off" height="25" width="25">
+              <p>Resultado</p>
+
+            </div>
+
+            <div id="uk" class="coin">
+              <img src="uk.png" alt="Costa Rica Flag" height="100" width="100">
+              <p>Reino Unido</p>
+              <p>Libra esterlina</p>
+              <p>GBP</p>
+              <input type="number" onchange="onChangeInput.call(this)">
+              <img src="starOff.png" onclick="onClickStar.call(this)" alt="Star off" height="25" width="25">
+              <p>Resultado</p>
+
+            </div>
+
+          </div>
+
+        <div id="third">
+          <div id="india" class="coin">
+            <img src="india.png" alt="Costa Rica Flag" height="100" width="100">
+            <p>India</p>
+            <p>Rupia India</p>
+            <p>INR</p>
+            <input type="number" onchange="onChangeInput.call(this)">
+            <img src="starOff.png" onclick="onClickStar.call(this)" alt="Star off" height="25" width="25">
+
+          </div>
+
+          <div id="russia" class="coin">
+            <img src="russia.png" alt="Costa Rica Flag" height="100" width="100">
+            <p>Rusia</p>
+            <p>Rublo ruso</p>
+            <p>RUB</p>
+            <input type="number" onchange="onChangeInput.call(this)">
+            <img src="starOff.png" onclick="onClickStar.call(this)" alt="Star off" height="25" width="25">
+
+          </div>
+
+          <div id="guatemala" class="coin">
+            <img src="guatemala.png" alt="Costa Rica Flag" height="100" width="100">
+            <p>Guatemala</p>
+            <p>Quetzal</p>
+            <p>GTQ</p>
+            <input type="number" onchange="onChangeInput.call(this)">
+            <img src="starOff.png" onclick="onClickStar.call(this)" alt="Star off" height="25" width="25">
+          </div>
+
+          <div id="mexico" class="coin">
+            <img src="mexico.png" alt="Costa Rica Flag" height="100" width="100">
+            <p>México</p>
+            <p>Peso Mexicano</p>
+            <p>MXN</p>
+            <input type="number" onchange="onChangeInput.call(this)">
+            <img src="starOff.png" onclick="onClickStar.call(this)" alt="Star off" height="25" width="25">
+
+          </div>
+
+        </div>
+        </div>
+      </div>
+      <button id="buttonConvert" onclick="onClickConvert()"> Convertir </button>
+      <button id="buttonClean" onclick="onClickClean()"> Limpiar </button>
+
+    </body>
+  </head>
+
+</html>

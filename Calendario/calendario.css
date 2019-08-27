@@ -1,0 +1,60 @@
+#calendario {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+#fechaactual {
+  margin: auto;
+  width: 20%;
+  padding: 10px;
+}
+
+#diasc {
+  border-style: solid;
+}
+
+
+#titulos {
+  font-weight: bold;
+}
+
+
+#titulosMeses{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center
+
+}
+
+#buscarFecha {
+  margin: auto;
+  width: 30%;
+  padding: 10px;
+}
+
+
+#diasc {
+  margin: auto;
+  width: 100%;
+  padding: 10px;
+}
+
+#titulos {
+  margin: auto;
+  width: 80%;
+  padding: 10px;
+}
+
+#anterior {
+  margin: auto;
+  width: 10%;
+  padding: 10px;
+}
+
+#posterior {
+  margin: auto;
+  width: 10%;
+  padding: 10px;
+}
