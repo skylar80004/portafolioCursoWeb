@@ -1,0 +1,115 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: 'Overpass', sans-serif;
+  letter-spacing: 0px;
+  font-size: 17px;
+  color: #8d8f90;
+  font-weight: 400;
+  line-height: 32px;
+  background-color: #edefef; }
+h1, h2, h3, h4, h5, h6 {
+  color: #25292a; margin: 0px 0px 10px 0px; font-family: 'Overpass', sans-serif; font-weight: 700; letter-spacing: -1px; line-height: 1; }
+h1 { font-size: 34px; }
+h2 { font-size: 28px; line-height: 38px; }
+h3 { font-size: 22px; line-height: 32px; }
+h4 { font-size: 20px; }
+h5 { font-size: 17px; }
+h6 { font-size: 12px; }
+p { margin: 0 0 20px; line-height: 1.7; }
+p:last-child { margin: 0px; }
+ul, ol { }
+a { text-decoration: none; color: #8d8f90; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; transition: all 0.3s; }
+a:focus, a:hover { text-decoration: none; color: #f85759; }
+
+
+
+.page-header {
+  background: url(https://www.pxwall.com/wp-content/uploads/2018/06/Wallpaper%20Macaw,%20parrot,%20tropics,%20Animals%20937267125.jpg)no-repeat;
+  position: relative;
+  background-size: cover;
+}
+.page-caption { padding-top: 170px; padding-bottom: 174px; }
+.page-title { font-size: 46px; line-height: 1; color: #fff; font-weight: 600; text-align: center; }
+
+.card-section { position: relative; bottom: 100px; }
+.card-block { padding: 10px;  }
+.section-title { margin-bottom: 10px; }
+
+
+
+/* Css de acordion: */
+
+*{
+  margin:0;
+  padding:0;
+}
+
+body{
+  background:#ccc;
+  font-family: arial,verdana,tahoma;
+}
+/*
+Width of image : 500;
+Width of hovered image: 500
+Width of unhovered image: 25x;
+Width of container : 500 + 50*4 = 700px;
+Default 700/5 : 140px;
+*/
+
+.accordian{
+  width: 750px;
+  height: 333px;
+  overflow:hidden;
+
+  margin: 20px auto;
+  -webkit-box-shadow: 0 8px 6px -6px black;
+  -moz-box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0px 8px 6px -6px black;
+}
+.accordian ul{
+
+}
+.accordian li{
+  position: relative;
+  display:block;
+  width:125px;
+  float: left;
+
+  border-left: 1px solid #888;
+  -webkit-box-shadow: 0 0 25px 10px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0 0 25px 10px rgba(0,0,0,0.5);
+
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+}
+
+
+.accordian ul:hover li{
+  width: 50px;
+}
+
+.accordian ul li:hover{
+  width:500px;
+}
+
+.accordian li img{
+  display: block;
+}
+
+.image_title{
+  background: rgba(0,0,0,0.5);
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:500px;
+}
+
+.image_title a{
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding:20px;
+  font-size:16px;
+}
