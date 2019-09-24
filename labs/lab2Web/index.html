@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Mapa simple de OpenStreetMap con Leaflet</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+  <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+
+</head>
+<body>
+<h1>Mapa simple de OpenStreetMap con Leaflet</h1>
+<div id="map" class="map map-home" style="margin:12px 0 12px 0;height:600px;"></div>
+<script>
+	var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+		osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+		osm = L.tileLayer(osmUrl, {maxZoom:40 , attribution: osmAttrib});
+
+  var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+	maxZoom: 19,
+	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>'
+});
+
+	var map = L.map('map').setView([9.973255, -84.083802], 17).addLayer(OpenStreetMap_HOT);
+	L.marker([9.973255, -84.083802])
+		.addTo(map)
+		.bindPopup('Cafetería La Centenaria')
+		.openPopup();
+	L.marker([9.974183, -84.080958])
+		.addTo(map)
+		.bindPopup('Fut Sala 5 Los Gallos')
+		.openPopup();
+	L.marker([9.973405, -84.081819])
+		.addTo(map)
+		.bindPopup('Parque La Lencha')
+		.openPopup();
+	L.marker([9.972953, -84.085764])
+		.addTo(map)
+		.bindPopup('Ermita San Martín')
+		.openPopup();
+	L.marker([9.974981, -84.084486])
+		.addTo(map)
+		.bindPopup('Miel dorada La Bajura')
+		.openPopup();
+	L.marker([9.975658, -84.084603])
+		.addTo(map)
+		.bindPopup('Abastecedor San Martín')
+		.openPopup();
+
+  var polygonLatLon = [[9.974183, -84.080958],[9.974183, -84.080958],[9.973405, -84.081819],[9.974981, -84.084486],[9.975658, -84.084603]];
+  var polylineLatLon = [[9.974183, -84.080958],[9.974183, -84.080958],[9.973405, -84.081819],[9.973255, -84.083802]];
+
+  var polygon = L.polygon(polygonLatLon, {color: 'red'}).addTo(map);
+    // zoom the map to the polygon
+  var polyline = L.polyline(polylineLatLon, {color: 'blue'}).addTo(map);
+
+  L.Routing.control({
+  waypoints: [
+    L.latLng(9.974183, -84.080958),
+    L.latLng(9.975658, -84.084603)
+  ]
+}).addTo(map);
+
+  map.fitBounds(polygon.getBounds());
+
+
+
+</script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
